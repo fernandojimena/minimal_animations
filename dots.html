@@ -1,0 +1,47 @@
+<style>
+    div{
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    ol {
+        list-style: none;
+    }
+    ol li {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        counter-increment: number;
+    }
+
+    li::before {
+        content: counter(number);
+        margin-right: 10px;
+        background-color: rgb(39, 39, 39);
+        color: white;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.7s background-color;
+    }
+    li:hover::before {
+        background-color: crimson;
+    }
+</style>
+
+<div>
+    <ol>
+        <li>elemento</li>
+        <li>elemento</li>
+        <li>elemento</li>
+        <li>elemento</li>
+        <li>elemento</li>
+    </ol>
+</div>

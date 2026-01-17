@@ -1,0 +1,35 @@
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        width: max-content;
+        position: relative;
+    }
+
+    h1::after{
+        content: '';
+        background: linear-gradient(to right, crimson, coral, yellow);
+        width: 0px;
+        height: 5px;
+        position: absolute;
+        bottom: -5;
+        left: 0;
+        border-radius: 100px ;
+        
+    }
+    h1:hover::after {
+        animation: growup 1s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes growup {
+        to {
+            width: 100%;
+            
+        }
+    }
+
+</style>
+
+
+<h1>My Element</h1>
